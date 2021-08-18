@@ -139,7 +139,7 @@ def lambda_handler(event, context):
     result_df = pd.read_sql(sql_query, connection)
     print(result_df.head())
     # name of the csv to create
-    csv_name = date.today().strftime("%d%m%Y")+"_reservation_chat.csv"
+    csv_name = date.today().strftime("%d%m%Y")+"_reservation_a_b.csv"
     path= '/tmp/{csv_name}'.format(csv_name=csv_name)
     result_df.to_csv(path, sep = ';', index=False)  
     
